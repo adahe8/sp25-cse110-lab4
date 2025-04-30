@@ -13,14 +13,14 @@
 10. Line 12 will print out a 3, since the input list `prices` when the function is called has 3 values, the `length` variable is block scoped to be accessible throughout the function (it's defined at the top of the function).
 11. This code causes an error, because at line 7, after the first time the for loop executes, there is an attempt to reassign a constant to a new value, which is not allowed in javascript.
 ### Data Types
-12. notations
+12\. Notations  
     A. student.name  
     B. student['Grad Year']   
     C. student.greeting  
     D. student['Favorite Teacher'].name  
     E. student.courseLoad[0]
 ### Basic Operators & Type Conversion
-13. Arithmetic
+13\. Arithmetic  
     A. '32' since in string integer addition integers map to their exact string representation, and its treated as concatenation.  
     B. 1 since there's no alternative string operation to subtraction, so if the string in the operation is convertible to an exact numerical representation, that will be forced.  
     C. 3 since null will be forced to its integer mapping, 0 to be compatible with integer addition.  
@@ -29,13 +29,13 @@
     F. 0, since it doesn't make sense to add a boolean and an object, but both the boolean `false` and `null` have integer representations of 0, which can be added.
     G. '3undefined', since the addition operator here is used for string concatenation because the firs value is a string.  
     H. `NaN`, since there is no numerical equivalent of undefined, so it will be switched to `NaN`, the numerical indicator of a non numerica value. Any arithmetic performed with a `NaN` value will be `NaN` (not a number).  
-14. Comparison  
+14\. Comparison  
     A. True, since '2' is switched to its int representation to be ciompatible with the operation, and 2 is > 1.  
     B. True since strings are compared "letter" by "letter", and '2' is > '1'.  
     C. True because loose equality is evaluated after type coercion, so '2' is converted to its integer mapping, 2.  
     D. False since strict equality doesn't coerce type, and 2 and '2' are different types, so they cannot be euqal.  
     E. False because after type coercion for the comparison. true's integer mapping is 1, which is not equal to 2.  
     F. True because any integer greater than 0 has the boolean mapping true when it is converted to a boolean.
-15. The `==` operator is the loose equality evaluation, which allows for type coercion before the evaluation is performed, so it returns true if the items have the same value, even if they are of different types. `===`, on the other hand, is strict equality, which doesn't allow type coercion and only returns true if the items being evaluated are also of the same type as well as value.
+15\. The `==` operator is the loose equality evaluation, which allows for type coercion before the evaluation is performed, so it returns true if the items have the same value, even if they are of different types. `===`, on the other hand, is strict equality, which doesn't allow type coercion and only returns true if the items being evaluated are also of the same type as well as value.
 17\. The function will return the array [2,4,6]. When `modifyArray([1,2,3], doSomething)` is called, the `modifyArray` function is executed with input `array` parameter `[1,2,3]` and `callback` parameter `doSomething`. Then as we see in the for loop, for each value of the input array, we call `doSomething` with that value passed in, and append the result to the constant `newArr`. `doSomething` returns the numbers it is passed doubled, so `newArr` is populated with the doubled values of the input array, and that is what is returned.  
 19\. The code outputs `1` followed immediately by `3` and then `4`, before finally printing out `2` after 1 second.
